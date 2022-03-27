@@ -2,6 +2,9 @@
 //THE TEST SERVER IS RUNNING ON LOCALHOST:3000//
 ////////////////////////////////////////////////
 
+
+
+
 //const { default: axios } = require("axios");
 
 
@@ -107,10 +110,16 @@ document.getElementById('animals-button').addEventListener('click', ohMy)
 */
 
 const repeatMyParam = () => {
-    axios.get('http://localhost:3000/animals').then((res) =>{
-        console.log(res);
+    axios.get('http://localhost:3000/repeat/steve').then((res) =>{
+        console.log(res.data);
+        let param = document.getElementById('repeat-text');
+        param.style.display = 'block';
+        param.textContent = res.data;
     })
+
 }
+
+document.getElementById('repeat-button').addEventListener('click', repeatMyParam);
 
 // PROBLEM 7
 /*
@@ -133,7 +142,15 @@ const repeatMyParam = () => {
 */
 
 // CODE HERE
+const queryIt = () => {
+    axios.get('http://localhost:3000/query-test', { params: { answer: 42 } }).then((res) =>{
+        console.log(res.data);
+    });
+    
+  
+}
 
+document.getElementById('query-button').addEventListener('click', queryIt);
 
 
 ////////////////
