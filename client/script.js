@@ -170,9 +170,9 @@ document.getElementById('query-button').addEventListener('click', queryIt);
 /*
     In the function that you wrote for Problem 8, change the URL to test a couple different scenarios. 
 
-    1: Send no queries on the URL -- what happened? 
+    1: Send no queries on the URL -- what happened? it said that i didnt send in any queries.
 
-    2: Send more than 1 query on the URL -- what happened? 
+    2: Send more than 1 query on the URL -- what happened?  it said i sent more then 1 query.
 */
 
 // Edit code in Problem 8
